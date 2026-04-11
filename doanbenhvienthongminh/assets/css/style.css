@@ -1,0 +1,242 @@
+/* ========================================================
+   FILE: style.css
+   Version: 3.0 (Lien Hoa Medical Theme)
+   Mô tả: Bộ CSS phong cách Xanh Cổ vịt (Teal) & Deep Blue (Y tế cao cấp)
+   ======================================================== */
+
+:root {
+    --primary-color: #0d5c75; /* Xanh Deep Teal sang trọng */
+    --bs-primary: #0d5c75;
+    --info-color: #1bbca0; /* Xanh lam nổi bật gradient */
+    --success-color: #2a9d8f;
+    --bg-light: #f2fafa; /* Nền trắng hơi ám xám xanh rất nhẹ tạo cảm giác an tĩnh */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--bg-light);
+    color: #1e303b;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ================== NAVBAR GLASSMORPHISM ================== */
+.navbar-glass {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(13, 92, 117, 0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: var(--info-color) !important;
+}
+
+/* ================== NÚT ĐẶT LỊCH NỔI BẬT TRÊN MENU ================== */
+.btn-booking-nav {
+    background: linear-gradient(135deg, #1bbca0 0%, #0d5c75 100%);
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(27, 188, 160, 0.3) !important;
+    color: white !important;
+}
+
+.btn-booking-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 92, 117, 0.35) !important;
+    background: linear-gradient(135deg, #22d8b8 0%, #106f8c 100%);
+}
+
+/* ================== HERO BANNER TỐI GIẢN ================== */
+.hero-section {
+    background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+    min-height: 60vh;
+    border-radius: 0 0 70px 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Typography styles */
+.hero-title {
+    font-size: 3rem;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    letter-spacing: -1px;
+}
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+.text-hospital-blue {
+    color: #0d5c75;
+}
+
+.text-hospital-blue-light {
+    color: #1a6f8a;
+    font-size: 1.15rem;
+}
+
+.hero-badge {
+    background: rgba(13, 92, 117, 0.1);
+    color: #0d5c75;
+    border: 1px solid rgba(13, 92, 117, 0.2);
+}
+
+
+.fw-black {
+    font-weight: 900;
+}
+
+/* Hoạt ảnh cho các mảnh ảnh nổi */
+.float-img {
+    animation: bobbing 5s infinite ease-in-out;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes bobbing {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+    100% { transform: translateY(0); }
+}
+
+/* Các Background Hình Tròn mờ Floating */
+.hero-bg-shapes {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden;
+}
+
+.shape-1 {
+    position: absolute; width: 450px; height: 450px; background: rgba(13, 92, 117, 0.03); border-radius: 50%; top: -100px; right: 10%; animation: pulseBg 9s infinite alternate;
+}
+
+.shape-2 {
+    position: absolute; width: 650px; height: 650px; background: rgba(27, 188, 160, 0.05); border-radius: 50%; bottom: -150px; left: -150px; animation: pulseBg 14s infinite alternate-reverse;
+}
+
+@keyframes pulseBg {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+/* Animation mờ dần hiện lên khi load (Fade-in-up) */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================== FEATURE CARDS (THẺ DỊCH VỤ NỔI BẬT) ================== */
+.feature-card {
+    background: white;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(13, 92, 117, 0.15);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.icon-bg-primary {
+    background: linear-gradient(135deg, rgba(13, 92, 117, 0.12), rgba(13, 92, 117, 0.04));
+    color: var(--primary-color);
+}
+
+.icon-bg-info {
+    background: linear-gradient(135deg, rgba(27, 188, 160, 0.15), rgba(27, 188, 160, 0.05));
+    color: var(--info-color);
+}
+
+.icon-bg-success {
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.15), rgba(42, 157, 143, 0.05));
+    color: var(--success-color);
+}
+
+.hover-link {
+    transition: padding-bottom 0.2s;
+    padding-bottom: 2px;
+}
+
+.hover-link:hover {
+    padding-bottom: 0px;
+    border-width: 2px !important;
+}
+
+/* ================== SYSTEM UI (DOCTOR & PACKAGE CARDS) ================== */
+.doctor-card {
+    background: white;
+    border-radius: 24px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.doctor-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(13, 92, 117, 0.12);
+    border-color: rgba(27, 188, 160, 0.3);
+}
+
+.doctor-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #eef6f6;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.doctor-card:hover .doctor-avatar {
+    border-color: var(--info-color);
+    transform: scale(1.05);
+}
+
+/* ================== FOOTER ================== */
+.footer-premium {
+    background: linear-gradient(to top, #062330 0%, #0d4659 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* Đã chia css Dịch vụ sang file services.css riêng */
