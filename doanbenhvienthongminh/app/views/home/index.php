@@ -1,29 +1,26 @@
 <?php require_once APP_DIR . '/views/layouts/header.php'; ?>
 
 <!-- BANNER HERO CHÍNH -->
-<section class="hero-section d-flex align-items-center pt-5 pb-5 p-lg-0">
-    <div class="hero-bg-shapes">
-        <div class="shape-1"></div>
-        <div class="shape-2"></div>
-    </div>
-    <div class="container position-relative z-1 py-5">
-        <div class="row align-items-center justify-content-center">
-            
-            <!-- Nội dung văn bản trung tâm -->
-            <div class="col-lg-10 col-xl-9 text-center py-5">
-                <span class="badge hero-badge rounded-pill px-3 py-2 mb-4 fw-bold shadow-sm d-inline-flex align-items-center gap-2 animate-fade-in-up">
-                    <i class="bi bi-stars"></i> Top #1 Dịch Vụ Y Tế Trực Tuyến
-                </span>
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10 col-xl-9 animate-fade-in-up">
+                <div class="hero-badge px-3 py-1 rounded-pill d-inline-block mb-3">
+                    <span class="fs-6 fw-bold">🌟 Top #1 Dịch Vụ Y Tế Trực Tuyến</span>
+                </div>
                 
-                <h1 class="hero-title text-hospital-blue fw-black mb-4 lh-base animate-fade-in-up" style="animation-delay: 0.1s;">
-                    Chăm sóc Sức khỏe Toàn Diện & Tận Tâm
+                <h1 class="hero-title mb-4">
+                    Chăm sóc Sức khỏe <br>
+                    <span class="text-primary">Toàn Diện & Tận Tâm</span>
                 </h1>
                 
-                <p class="hero-desc text-hospital-blue-light mb-0 fw-normal animate-fade-in-up lh-lg mx-auto" style="animation-delay: 0.2s; max-width: 800px;">
-                    Trải nghiệm hệ sinh thái dịch vụ y tế kỹ thuật số đỉnh cao. Đội ngũ chuyên gia y tế nước ngoài và trong nước luôn sẵn sàng đồng hành cùng bạn trên mọi hành trình.
+                <p class="hero-desc mb-0">
+                    Được thành lập vào năm 2008, <strong>Liên Hoa Medical</strong> tự hào là một trong những hệ thống y tế tư nhân hiện đại hàng đầu. 
+                    Với quy mô hơn 300 giường bệnh tại trung tâm thành phố, chúng tôi phục vụ hàng ngàn lượt bệnh nhân mỗi ngày bằng sự tận tâm 
+                    và công nghệ kỹ thuật số tiên tiến nhất. Chúng tôi cam kết mang đến dịch vụ chăm sóc sức khỏe chất lượng cao, chi phí hợp lý 
+                    và an toàn tuyệt đối cho mọi gia đình.
                 </p>
             </div>
-
         </div>
     </div>
 </section>

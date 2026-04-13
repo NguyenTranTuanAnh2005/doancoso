@@ -26,7 +26,7 @@
             <!-- Logo -->
             <a class="navbar-brand text-primary fw-bolder d-flex align-items-center gap-2" href="/doanbenhvienthongminh/">
                 <i class="bi bi-flower1 fs-2" style="color: var(--primary-color)"></i> 
-                <span class="fs-4">LIÊN HOA<span class="text-info"> MEDICAL</span></span>
+                <span class="fs-4">LIÊN HOA<span class="text-info"> HOSPITAL</span></span>
             </a>
             
             <!-- Nút Toggle Mobile -->

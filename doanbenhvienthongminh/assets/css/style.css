@@ -5,11 +5,14 @@
    ======================================================== */
 
 :root {
-    --primary-color: #0d5c75; /* Xanh Deep Teal sang trọng */
+    --primary-color: #0d5c75;
+    /* Xanh Deep Teal sang trọng */
     --bs-primary: #0d5c75;
-    --info-color: #1bbca0; /* Xanh lam nổi bật gradient */
+    --info-color: #1bbca0;
+    /* Xanh lam nổi bật gradient */
     --success-color: #2a9d8f;
-    --bg-light: #f2fafa; /* Nền trắng hơi ám xám xanh rất nhẹ tạo cảm giác an tĩnh */
+    --bg-light: #f2fafa;
+    /* Nền trắng hơi ám xám xanh rất nhẹ tạo cảm giác an tĩnh */
 }
 
 body {
@@ -57,22 +60,50 @@ body {
 
 /* ================== HERO BANNER TỐI GIẢN ================== */
 .hero-section {
-    background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+    background-color: #e3f2fd;
+    background-image: linear-gradient(to right,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.6) 100%), url('../images/image_11.png?v=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 60vh;
     border-radius: 0 0 70px 70px;
     position: relative;
     overflow: hidden;
 }
 
+@media (min-width: 992px) {
+    .hero-section {
+        background-image: linear-gradient(to right,
+                rgba(255, 255, 255, 0.92) 0%,
+                rgba(255, 255, 255, 0.3) 55%,
+                rgba(255, 255, 255, 0) 100%), url('../images/image_11.png?v=1');
+    }
+}
+
 /* Typography styles */
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'Outfit', 'Inter', sans-serif;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 }
+
 @media (min-width: 992px) {
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 5.5rem;
+    }
+}
+
+.hero-desc {
+    font-size: 1.25rem;
+    line-height: 2 !important;
+}
+
+@media (min-width: 992px) {
+    .hero-desc {
+        font-size: 1.35rem;
+        line-height: 2.2 !important;
     }
 }
 
@@ -96,35 +127,7 @@ body {
     font-weight: 900;
 }
 
-/* Hoạt ảnh cho các mảnh ảnh nổi */
-.float-img {
-    animation: bobbing 5s infinite ease-in-out;
-    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.3));
-}
 
-@keyframes bobbing {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
-    100% { transform: translateY(0); }
-}
-
-/* Các Background Hình Tròn mờ Floating */
-.hero-bg-shapes {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden;
-}
-
-.shape-1 {
-    position: absolute; width: 450px; height: 450px; background: rgba(13, 92, 117, 0.03); border-radius: 50%; top: -100px; right: 10%; animation: pulseBg 9s infinite alternate;
-}
-
-.shape-2 {
-    position: absolute; width: 650px; height: 650px; background: rgba(27, 188, 160, 0.05); border-radius: 50%; bottom: -150px; left: -150px; animation: pulseBg 14s infinite alternate-reverse;
-}
-
-@keyframes pulseBg {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.15); }
-}
 
 /* Animation mờ dần hiện lên khi load (Fade-in-up) */
 .animate-fade-in-up {
@@ -134,7 +137,10 @@ body {
 }
 
 @keyframes fadeInUp {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ================== FEATURE CARDS (THẺ DỊCH VỤ NỔI BẬT) ================== */

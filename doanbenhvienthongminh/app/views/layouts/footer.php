@@ -7,7 +7,7 @@
                 <!-- Về Bệnh Viện -->
                 <div class="col-lg-4 pe-lg-5 mb-4 mb-lg-0">
                     <h4 class="fw-bolder mb-4 d-flex align-items-center gap-2">
-                        <i class="bi bi-flower1 text-info"></i> Liên Hoa Medical
+                        <i class="bi bi-flower1 text-info"></i> Liên Hoa HOSPITAL
                     </h4>
                     <p class="text-white-50 lh-lg pe-3">Ứng dụng chuyển đổi số toàn diện trong y tế. Với thông điệp "Tận tâm chữa trị, ân cần chăm sóc", chúng tôi luôn mang lại dịch vụ nhanh chóng, tối ưu và hiệu quả nhất cho từng bệnh nhân.</p>
                 </div>
