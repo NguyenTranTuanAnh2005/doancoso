@@ -288,7 +288,8 @@ body {
 }
 
 .promo-card:hover .promo-img-wrap img {
-    transform: scale(1.08); /* Phóng to nhẹ khi hover*/
+    transform: scale(1.08);
+    /* Phóng to nhẹ khi hover*/
 }
 
 .promo-badge-hospital {
@@ -356,6 +357,111 @@ body {
     transform: translateX(4px);
 }
 
+/* ================== ĐỘI NGŨ BÁC SĨ (MỚI) ================== */
+.doctor-team-section {
+    padding: 80px 0;
+}
+
+.doctor-card-modern {
+    background: white;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(13, 92, 117, 0.12);
+}
+
+.doctor-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px; /* ~60% height */
+    overflow: hidden;
+    border-radius: 25px 25px 0 0;
+}
+
+.doctor-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.doctor-card-modern:hover .doctor-img-wrap img {
+    transform: scale(1.08); /* Phóng to nhẹ khi hover */
+}
+
+.doctor-card-body {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+}
+
+.doctor-badge {
+    background: #e6f5f3;
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.doctor-name {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.doctor-desc {
+    color: #556068;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.doctor-card-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--info-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.doctor-card-link i {
+    transition: transform 0.3s ease;
+    margin-left: 6px;
+    font-size: 1.2rem;
+}
+
+.doctor-card-link:hover {
+    color: var(--primary-color);
+}
+
+.doctor-card-link:hover i {
+    transform: translateX(4px);
+}
+
 /* ================== CHUYÊN KHOA MŨI NHỌN ================== */
 .specialty-section {
     padding: 70px 0;
@@ -397,7 +503,8 @@ body {
 .specialty-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(13, 92, 117, 0.12);
-    border-color: var(--info-color); /* Đổi màu viền xanh Teal sáng */
+    border-color: var(--info-color);
+    /* Đổi màu viền xanh Teal sáng */
 }
 
 .specialty-img-wrap {

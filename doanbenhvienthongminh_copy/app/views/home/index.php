@@ -174,6 +174,78 @@
     </div>
 </section>
 
+<!-- ĐỘI NGŨ BÁC SĨ -->
+<section class="doctor-team-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder" style="color: var(--primary-color);">Đội ngũ bác sĩ chuyên gia</h2>
+            <p class="text-muted fs-5">Gặp gỡ các bác sĩ chuyên khoa phụ trách giàu kinh nghiệm của Liên Hoa Medical, luôn tận tụy vì sức khỏe cộng đồng.</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Bác sĩ 1 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="doctor-card-modern">
+                    <div class="doctor-img-wrap">
+                        <img src="<?= BASE_URL ?>/assets/images/doctor1.jpg?v=1" alt="BS. CKII Nguyễn Văn A">
+                    </div>
+                    <div class="doctor-card-body">
+                        <span class="doctor-badge">Khoa Nội tổng quát</span>
+                        <h3 class="doctor-name">BS. CKII Nguyễn Văn A</h3>
+                        <div class="doctor-desc">Hơn 15 năm kinh nghiệm trong khám và điều trị các bệnh lý nội khoa chuyên sâu.</div>
+                        <a href="<?= BASE_URL ?>/doctor/detail/1" class="doctor-card-link">Xem chi tiết <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bác sĩ 2 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="doctor-card-modern">
+                    <div class="doctor-img-wrap">
+                        <img src="<?= BASE_URL ?>/assets/images/doctor1.jpg?v=1" alt="ThS. BS Trần Thị B">
+                    </div>
+                    <div class="doctor-card-body">
+                        <span class="doctor-badge">Khoa Nhi</span>
+                        <h3 class="doctor-name">ThS. BS Trần Thị B</h3>
+                        <div class="doctor-desc">Chuyên gia hàng đầu về dinh dưỡng và chẩn đoán điều trị hô hấp nhi khoa.</div>
+                        <a href="<?= BASE_URL ?>/doctor/detail/2" class="doctor-card-link">Xem chi tiết <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bác sĩ 3 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="doctor-card-modern">
+                    <div class="doctor-img-wrap">
+                        <img src="<?= BASE_URL ?>/assets/images/doctor1.jpg?v=1" alt="BS. CKI Lê Văn C">
+                    </div>
+                    <div class="doctor-card-body">
+                        <span class="doctor-badge">Khoa Ngoại</span>
+                        <h3 class="doctor-name">BS. CKI Lê Văn C</h3>
+                        <div class="doctor-desc">Nhiều năm kinh nghiệm trong thực hiện phẫu thuật nội soi ổ bụng và lồng ngực.</div>
+                        <a href="<?= BASE_URL ?>/doctor/detail/3" class="doctor-card-link">Xem chi tiết <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bác sĩ 4 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="doctor-card-modern">
+                    <div class="doctor-img-wrap">
+                        <img src="<?= BASE_URL ?>/assets/images/doctor2.jpg?v=1" alt="BS. CKII Phạm Thị D">
+                    </div>
+                    <div class="doctor-card-body">
+                        <span class="doctor-badge">Khoa Tim mặt</span>
+                        <h3 class="doctor-name">BS. CKII Phạm Thị D</h3>
+                        <div class="doctor-desc">Chuyên gia điều trị các bệnh lý tim mạch phức tạp, huyết áp, tiểu đường.</div>
+                        <a href="<?= BASE_URL ?>/doctor/detail/4" class="doctor-card-link">Xem chi tiết <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CHUYÊN KHOA MŨI NHỌN -->
 <section class="specialty-section">
     <div class="container">
