@@ -1,32 +1,68 @@
 <?php require_once APP_DIR . '/views/layouts/header.php'; ?>
 
 <!-- BANNER HERO CHÍNH -->
-<section class="hero-section py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-10 col-xl-9 animate-fade-in-up">
-                <div class="hero-badge px-3 py-1 rounded-pill d-inline-block mb-3">
+<section class="hero-section position-relative overflow-hidden" style="min-height: 550px; background-color: #f8fbff;">
+    <div class="position-absolute top-0 end-0 h-100 w-100 d-none d-lg-block" style="
+        background-image: linear-gradient(to right, #f8fbff 35%, rgba(248, 251, 255, 0) 60%), url('<?= BASE_URL ?>/assets/images/image_11.png');
+        background-size: cover;
+        background-position: center right;
+        z-index: 1;
+    "></div>
+
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center" style="min-height: 550px;">
+            <div class="col-lg-6 col-xl-5 animate-fade-in-up">
+                <div class="hero-badge px-3 py-1 rounded-pill d-inline-block mb-3" style="background: rgba(13, 92, 117, 0.1); color: var(--primary-color);">
                     <span class="fs-6 fw-bold">🌟 Top #1 Dịch Vụ Y Tế Trực Tuyến</span>
                 </div>
                 
-                <h1 class="hero-title mb-4">
-                    Chăm sóc Sức khỏe <br>
-                    <span class="text-primary">Toàn Diện & Tận Tâm</span>
+                <h1 class="hero-title mb-0" style="font-size: 4rem; font-weight: 800; line-height: 1.1; color: #0d3b4b;">
+                    Bệnh Viện <br>
+                    <span style="color: var(--primary-color);">Liên Hoa</span>
                 </h1>
                 
-                <p class="hero-desc mb-0">
-                    Được thành lập vào năm 2008, <strong>Liên Hoa Medical</strong> tự hào là một trong những hệ thống y tế tư nhân hiện đại hàng đầu. 
-                    Với quy mô hơn 300 giường bệnh tại trung tâm thành phố, chúng tôi phục vụ hàng ngàn lượt bệnh nhân mỗi ngày bằng sự tận tâm 
-                    và công nghệ kỹ thuật số tiên tiến nhất. Chúng tôi cam kết mang đến dịch vụ chăm sóc sức khỏe chất lượng cao, chi phí hợp lý 
-                    và an toàn tuyệt đối cho mọi gia đình.
-                </p>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- GIỚI THIỆU VỀ BỆNH VIỆN (COMPACT CARD) -->
+<section style="padding: 60px 0; background: transparent;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+                <!-- CARD VỚI VIỀN TRÒN -->
+                <div style="
+                    background: white;
+                    border-radius: 25px;
+                    border: 2px solid var(--primary-color);
+                    padding: 50px 45px;
+                    box-shadow: 0 10px 40px rgba(13, 92, 117, 0.08);
+                    transition: all 0.3s ease;
+                ">
+                    <h2 class="fw-bolder text-center mb-5" style="color: var(--primary-color); font-size: 1.8rem;">
+                        Giới thiệu về Bệnh Viện Liên Hoa
+                    </h2>
+                    
+                    <p class="text-muted lh-lg mb-4" style="text-align: justify; font-size: 0.95rem;">
+                        Được thành lập vào năm 1999, Bệnh Viện Liên Hoa là bệnh viện tư nhân hàng đầu tại Việt Nam và hiện là bệnh viện hàng đầu của Tập đoàn y khoa Liên Hoa. Bệnh viện có quy mô hơn 300 giường bệnh tại Thành phố Hồ Chí Minh phục vụ hơn 2.500 bệnh nhân mỗi ngày.
+                    </p>
+                    
+                    <p class="text-muted lh-lg mb-4" style="text-align: justify; font-size: 0.95rem;">
+                        Chúng tôi cung cấp dịch vụ chăm sóc tận tâm, chất lượng cao, chi phí hợp lý với nhiều chuyên khoa và tư vấn của chúng tôi tiếp tục tại các bệnh viện liên viện trên toàn quốc, chào đón các chuyên gia y tế toàn cầu để kiến thức và lâm sàng quá.
+                    </p>
+                    
+                    <p class="text-muted lh-lg mb-0" style="text-align: justify; font-size: 0.95rem;">
+                        Chúng tôi được chứng nhận bởi Hội đông Tiêu chuẩn Chốm sóc Sức khỏe Ức Quốc tế (ACHSI), đây là sự minh chứng cao về chăm sóc làm sang, an toàn bệnh nhân và chất lượng dịch vụ cao nhất của chúng tôi.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- KHU VỰC THẺ TÍNH NĂNG (DỊCH VỤ CHÍNH) -->
-<section class="container pb-5 position-relative" style="margin-top: -60px; z-index: 10;">
+<section class="container pb-5 position-relative" style="margin-top: 40px; z-index: 10;">
     <div class="row g-4 px-3 px-lg-0">
         
         <!-- Chuyên Khoa Đa Dạng -->
@@ -84,7 +120,7 @@
 <!-- NHÚNG CSS MỚI CHO GIAO DIỆN DỊCH VỤ -->
 <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/services.css">
 
-<!-- DỊCH VỤ CỦA CHÚNG TÔI -->
+<!-- DỊCH VỤ CỦA CHÚNG TÔI -->
 <section class="container py-5 mt-4">
     <div class="text-center mb-5">
         <h2 class="fw-bolder text-dark">Dịch Vụ Của Chúng Tôi</h2>
@@ -92,10 +128,6 @@
     </div>
     
     <div class="medical-service-grid">
-        <!-- 1 -->
-
-        
-        <!-- 2 -->
         <a href="<?= BASE_URL ?>/payment" class="medical-service-card">
             <div class="medical-icon-circle icon-orange-pastel">
                 <i class="bi bi-credit-card"></i>
@@ -103,7 +135,6 @@
             <h3 class="medical-service-title">Thanh toán viện phí</h3>
         </a>
         
-        <!-- 3 -->
         <a href="<?= BASE_URL ?>/invoice" class="medical-service-card">
             <div class="medical-icon-circle icon-orange-pastel">
                 <i class="bi bi-receipt"></i>
@@ -111,7 +142,6 @@
             <h3 class="medical-service-title">Hóa đơn điện tử</h3>
         </a>
         
-        <!-- 4 -->
         <a href="<?= BASE_URL ?>/record" class="medical-service-card">
             <div class="medical-icon-circle icon-teal-pastel">
                 <i class="bi bi-file-earmark-medical"></i>
@@ -119,15 +149,13 @@
             <h3 class="medical-service-title">Hồ sơ sức khỏe</h3>
         </a>
         
-        <!-- 5 -->
         <a href="<?= BASE_URL ?>/laboratory" class="medical-service-card">
             <div class="medical-icon-circle icon-teal-pastel">
                 <i class="bi bi-clipboard2-pulse"></i>
             </div>
-            <h3 class="medical-service-title">Kết quả cận lâm sàng</h3>
+            <h3 class="medical-service-title">Kết quả cận lâm sàn</h3>
         </a>
         
-        <!-- 6 -->
         <a href="#" class="medical-service-card">
             <div class="medical-icon-circle icon-pink-pastel">
                 <i class="bi bi-hospital"></i>
@@ -135,13 +163,6 @@
             <h3 class="medical-service-title">Đăng ký nhập viện</h3>
         </a>
         
-        <!-- 7 -->
-        
-        <!-- 8 -->
-        
-        <!-- 9 -->
-        
-        <!-- 10 -->
         <a href="#" class="medical-service-card position-relative" style="background: linear-gradient(145deg, #ffffff, #f4fbff); border: 1px solid rgba(13, 202, 240, 0.3);">
             <span class="position-absolute badge rounded-pill bg-primary shadow-sm px-2 py-1" style="top: -12px; right: -10px; font-size: 0.75rem; letter-spacing: 0.5px;">
                 <i class="bi bi-stars text-warning"></i> SMART
@@ -159,7 +180,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bolder" style="color: var(--primary-color);">Đội ngũ bác sĩ chuyên gia</h2>
-            <p class="text-muted fs-5">Gặp gỡ các bác sĩ chuyên khoa phụ trách giàu kinh nghiệm của Liên Hoa Medical, luôn tận tụy vì sức khỏe cộng đồng.</p>
+            <p class="text-muted fs-5">Gặp gỡ các bác sĩ chuyên khoa phụ trách giàu kinh nghiệm của Bệnh Viện Liên Hoa, luôn tận tụy vì sức khỏe cộng đồng.</p>
         </div>
         
         <div class="row g-4">
@@ -231,7 +252,7 @@
     <div class="container">
         <div class="specialty-header">
             <h2 class="fw-bolder">Chuyên khoa mũi nhọn</h2>
-            <p>Liên Hoa Medical cung cấp một loạt chuyên khoa và dịch vụ y tế đa dạng, kết hợp kinh nghiệm y tế với công nghệ tiên tiến để cung cấp sự chăm sóc cao nhất cho bệnh nhân.</p>
+            <p>Bệnh Viện Liên Hoa cung cấp một loạt chuyên khoa và dịch vụ y tế đa dạng, kết hợp kinh nghiệm y tế với công nghệ tiên tiến để cung cấp sự chăm sóc cao nhất cho bệnh nhân.</p>
         </div>
         
         <div class="row g-4">
@@ -315,7 +336,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bolder" style="color: var(--primary-color);">Gói khám ưu đãi</h2>
-            <p class="text-muted fs-5">Lựa chọn chăm sóc sức khỏe thông minh hơn với các gói dịch vụ giá trị tuyệt vời của Liên Hoa Medical.</p>
+            <p class="text-muted fs-5">Lựa chọn chăm sóc sức khỏe thông minh hơn với các gói dịch vụ giá trị tuyệt vời của Bệnh Viện Liên Hoa.</p>
         </div>
         
         <div class="row g-4">
@@ -326,7 +347,7 @@
                         <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="Gói khám tổng quát Nam">
                     </div>
                     <div class="promo-card-body">
-                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh viện Liên Hoa</span>
+                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh Viện Liên Hoa</span>
                         <h3 class="promo-title">Gói khám tổng quát Nam</h3>
                         <div class="promo-desc">Chủ động phòng bệnh, sống khỏe trọn vẹn cả thanh xuân.</div>
                         <a href="<?= BASE_URL ?>/package/detail/1" class="promo-card-link">Xem thêm <i class="bi bi-arrow-right"></i></a>
@@ -341,7 +362,7 @@
                         <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Gói khám tiền sản">
                     </div>
                     <div class="promo-card-body">
-                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh viện Liên Hoa</span>
+                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh Viện Liên Hoa</span>
                         <h3 class="promo-title">Gói khám tiền sản</h3>
                         <div class="promo-desc">Chuẩn bị hành trang thai kỳ khỏe mạnh, chào đón thiên thần.</div>
                         <a href="<?= BASE_URL ?>/package/detail/2" class="promo-card-link">Xem thêm <i class="bi bi-arrow-right"></i></a>
@@ -356,7 +377,7 @@
                         <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=400&q=80" alt="Gói sinh">
                     </div>
                     <div class="promo-card-body">
-                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh viện Liên Hoa</span>
+                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh Viện Liên Hoa</span>
                         <h3 class="promo-title">Gói sinh</h3>
                         <div class="promo-desc">Gửi trọn yêu thương, vượt cạn an toàn cùng dịch vụ cao cấp.</div>
                         <a href="<?= BASE_URL ?>/package/detail/3" class="promo-card-link">Xem thêm <i class="bi bi-arrow-right"></i></a>
@@ -371,7 +392,7 @@
                         <img src="https://plus.unsplash.com/premium_photo-1661766718556-13c2efac1388?auto=format&fit=crop&w=400&q=80" alt="Gói khám tổng quát Nhi">
                     </div>
                     <div class="promo-card-body">
-                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh viện Liên Hoa</span>
+                        <span class="promo-badge-hospital"><i class="bi bi-hospital me-1"></i>Bệnh Viện Liên Hoa</span>
                         <h3 class="promo-title">Gói khám tổng quát Nhi</h3>
                         <div class="promo-desc">Chăm sóc toàn diện, chắp cánh cho con tương lai khỏe mạnh.</div>
                         <a href="<?= BASE_URL ?>/package/detail/4" class="promo-card-link">Xem thêm <i class="bi bi-arrow-right"></i></a>

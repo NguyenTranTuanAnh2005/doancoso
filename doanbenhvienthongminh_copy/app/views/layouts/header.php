@@ -91,12 +91,9 @@
           <button type="submit" class="btn btn-primary w-100" data-lang="btn_login">Đăng nhập</button>
         </form>
         
-        <div class="text-center mt-3">
-          <span data-lang="no_account">Bạn chưa có tài khoản?</span>
-          <br>
-          <button class="btn btn-link text-primary p-0" id="btnRegisterUser" data-lang="register_user">Đăng ký với tư cách Bệnh nhân</button>
-          <br>
-          <button class="btn btn-link text-danger p-0" id="btnRegisterAdmin" data-lang="register_admin">Đăng ký với tư cách Admin</button>
+        <div class="text-center mt-4">
+          <p class="text-muted mb-3" data-lang="welcome_msg">Chào mừng bạn đến với hệ thống chăm sóc sức khỏe Liên Hoa</p>
+          <button type="button" class="btn btn-primary rounded-pill w-100 py-2 fw-semibold shadow-sm" id="btnRegisterAccount" data-lang="register_account">Tham gia Liên Hoa Medical</button>
         </div>
       </div>
     </div>
@@ -113,26 +110,21 @@
       </div>
       <div class="modal-body">
         <form id="registerForm">
-          <div class="mb-3">
-            <label for="regRole" class="form-label" data-lang="register_role_label">Kiểu tài khoản</label>
-            <input class="form-control bg-light" id="regRole" readonly>
-          </div>
+          <!-- Mặc định ẩn Role, gán sẵn là Bệnh nhân trong CSDL khi submit -->
+          <input type="hidden" name="role" value="patient">
           <div class="mb-3">
             <label for="registerEmail" class="form-label" data-lang="register_email">Email</label>
-            <input type="email" class="form-control" id="registerEmail" required>
+            <input type="email" class="form-control rounded-3" id="registerEmail" required>
           </div>
           <div class="mb-3">
             <label for="registerPhone" class="form-label" data-lang="register_phone">Số điện thoại</label>
-            <input type="text" class="form-control" id="registerPhone" required>
+            <input type="text" class="form-control rounded-3" id="registerPhone" required>
           </div>
           <div class="mb-3">
             <label for="registerPassword" class="form-label" data-lang="register_password">Mật khẩu</label>
-            <input type="password" class="form-control" id="registerPassword" required>
+            <input type="password" class="form-control rounded-3" id="registerPassword" required>
           </div>
-          <button type="submit" class="btn btn-success w-100" data-lang="btn_register">Đăng ký</button>
-          <div class="text-center mt-2" id="adminPending" style="display:none;">
-            <small class="text-warning" data-lang="register_admin_pending">Vui lòng chờ kiểm duyệt từ bệnh viện khi đăng ký với tư cách Admin.</small>
-          </div>
+          <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 mt-2 fw-semibold shadow-sm" data-lang="btn_register">Đăng ký ngay</button>
         </form>
       </div>
     </div>
@@ -153,21 +145,16 @@
       nav_package: "Gói Khám Thể Chất",
       btn_login: "Đăng nhập",
       btn_book: "ĐẶT LỊCH NGAY",
-      login_title: "Đăng nhập tài khoản",
+      login_title: "Đăng nhập",
       login_email_phone: "Email/SĐT",
       login_password: "Mật khẩu",
-      no_account: "Bạn chưa có tài khoản?",
-      register_user: "Đăng ký với tư cách Bệnh nhân",
-      register_admin: "Đăng ký với tư cách Admin",
+      welcome_msg: "Chào mừng bạn đến với hệ thống chăm sóc sức khỏe Liên Hoa",
+      register_account: "Tham gia Liên Hoa Medical",
       register_title: "Đăng ký tài khoản",
-      register_role_label: "Kiểu tài khoản",
       register_email: "Email",
       register_phone: "Số điện thoại",
       register_password: "Mật khẩu",
-      btn_register: "Đăng ký",
-      register_admin_pending: "Vui lòng chờ kiểm duyệt từ bệnh viện khi đăng ký với tư cách Admin.",
-      reg_role_user: "Bệnh nhân (User)",
-      reg_role_admin: "Admin"
+      btn_register: "Đăng ký ngay"
     },
     EN: {
       pageTitle: "Lien Hoa Medical - The Essence of Healthcare",
@@ -178,21 +165,16 @@
       nav_package: "Physical Exam Packages",
       btn_login: "Login",
       btn_book: "BOOK NOW",
-      login_title: "User Login",
+      login_title: "Login",
       login_email_phone: "Email/Phone",
       login_password: "Password",
-      no_account: "Don't have an account?",
-      register_user: "Register as Patient",
-      register_admin: "Register as Admin",
+      welcome_msg: "Welcome to Lien Hoa Healthcare System",
+      register_account: "Join Lien Hoa Medical",
       register_title: "Register Account",
-      register_role_label: "Account Type",
       register_email: "Email",
       register_phone: "Phone Number",
       register_password: "Password",
-      btn_register: "Register",
-      register_admin_pending: "Please wait for hospital approval when registering as Admin.",
-      reg_role_user: "Patient (User)",
-      reg_role_admin: "Admin"
+      btn_register: "Register Now"
     }
   };
 
@@ -211,16 +193,6 @@
     // Đổi page title
     document.title = translations[lang].pageTitle;
 
-    // Đổi giá trị tài khoản trong modal đăng ký khi chuyển ngôn ngữ
-    if (document.getElementById("regRole")) {
-      // Nếu đang mở modal, kiểm tra lại value
-      if (document.getElementById('regRole').value === translations[lang === "VI" ? "EN" : "VI"].reg_role_user) {
-        document.getElementById('regRole').value = translations[lang].reg_role_user;
-      }
-      if (document.getElementById('regRole').value === translations[lang === "VI" ? "EN" : "VI"].reg_role_admin) {
-        document.getElementById('regRole').value = translations[lang].reg_role_admin;
-      }
-    }
     // Đổi thẻ html lang
     document.documentElement.lang = lang.toLowerCase();
   }
@@ -230,29 +202,21 @@
     const lang = this.checked ? 'EN' : 'VI';
     document.querySelector('#langLabel').textContent = lang;
     switchLanguage(lang);
-    // Nếu modal đăng ký đã mở, thì cập nhật role luôn
-    if (document.getElementById('registerModal').classList.contains('show')) {
-      let isAdmin = document.getElementById('regRole').value.includes('Admin');
-      document.getElementById('regRole').value = lang === 'VI' ?
-        (isAdmin ? translations.VI.reg_role_admin : translations.VI.reg_role_user) :
-        (isAdmin ? translations.EN.reg_role_admin : translations.EN.reg_role_user);
-    }
   });
 
-  // Xử lý mở modal đăng ký (User/Admin) - hỗ trợ đa ngôn ngữ
+  // Xử lý mở modal đăng ký - hỗ trợ đa ngôn ngữ
   const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
-  document.getElementById('btnRegisterUser').onclick = function() {
+  document.getElementById('btnRegisterAccount').onclick = function() {
     let lang = document.querySelector('#langSwitch').checked ? 'EN' : 'VI';
     document.getElementById('registerModalLabel').textContent = translations[lang].register_title;
-    document.getElementById('regRole').value = translations[lang].reg_role_user;
-    document.getElementById('adminPending').style.display = 'none';
-    registerModal.show();
-  };
-  document.getElementById('btnRegisterAdmin').onclick = function() {
-    let lang = document.querySelector('#langSwitch').checked ? 'EN' : 'VI';
-    document.getElementById('registerModalLabel').textContent = translations[lang].register_title;
-    document.getElementById('regRole').value = translations[lang].reg_role_admin;
-    document.getElementById('adminPending').style.display = 'block';
+    
+    // Đóng modal đăng nhập nếu đang mở trước khi mở đăng ký
+    const loginModalEl = document.getElementById('loginModal');
+    const loginModalInstance = bootstrap.Modal.getInstance(loginModalEl);
+    if(loginModalInstance) {
+        loginModalInstance.hide();
+    }
+    
     registerModal.show();
   };
 
