@@ -69,7 +69,7 @@
                     <div class="icon-box icon-bg-success mx-auto shadow-sm">
                         <i class="bi bi-headset"></i>
                     </div>
-                    <h4 class="fw-bolder mb-3 text-dark">Cấp Cứu 24/7</h4>
+                    <h4 class="fw-bolder mb-3 text-dark">Đặt Lịch Khám</h4>
                     <p class="text-muted mb-4 px-2 lh-lg">Dịch vụ xe cứu thương miễn phí nội thành. Hotline tư vấn triệu chứng và xử lý ngoại viện khẩn cấp hoạt động liên tục.</p>
                 </div>
                 <a href="<?= BASE_URL ?>/booking" class="text-success fw-bold text-decoration-none mt-auto hover-link mx-auto position-relative">
@@ -93,12 +93,7 @@
     
     <div class="medical-service-grid">
         <!-- 1 -->
-        <a href="<?= BASE_URL ?>/history" class="medical-service-card">
-            <div class="medical-icon-circle icon-blue-pastel">
-                <i class="bi bi-clock-history"></i>
-            </div>
-            <h3 class="medical-service-title">Lịch sử đặt khám</h3>
-        </a>
+
         
         <!-- 2 -->
         <a href="<?= BASE_URL ?>/payment" class="medical-service-card">
@@ -141,35 +136,20 @@
         </a>
         
         <!-- 7 -->
-        <a href="#" class="medical-service-card">
-            <div class="medical-icon-circle icon-green-pastel">
-                <i class="bi bi-chat-dots"></i>
-            </div>
-            <h3 class="medical-service-title">Lắng nghe khách hàng</h3>
-        </a>
         
         <!-- 8 -->
-        <a href="#" class="medical-service-card">
-            <div class="medical-icon-circle icon-green-pastel">
-                <i class="bi bi-headset"></i>
-            </div>
-            <h3 class="medical-service-title">Hỗ trợ trực tuyến</h3>
-        </a>
         
         <!-- 9 -->
-        <a href="#" class="medical-service-card">
-            <div class="medical-icon-circle icon-red-pastel">
-                <i class="bi bi-house-heart"></i>
-            </div>
-            <h3 class="medical-service-title">Theo dõi sức khỏe<br>tại nhà</h3>
-        </a>
         
         <!-- 10 -->
-        <a href="#" class="medical-service-card">
-            <div class="medical-icon-circle icon-teal-dark-pastel">
-                <i class="bi bi-shield-check"></i>
+        <a href="#" class="medical-service-card position-relative" style="background: linear-gradient(145deg, #ffffff, #f4fbff); border: 1px solid rgba(13, 202, 240, 0.3);">
+            <span class="position-absolute badge rounded-pill bg-primary shadow-sm px-2 py-1" style="top: -12px; right: -10px; font-size: 0.75rem; letter-spacing: 0.5px;">
+                <i class="bi bi-stars text-warning"></i> SMART
+            </span>
+            <div class="medical-icon-circle" style="background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); color: white; box-shadow: 0 8px 20px rgba(13, 202, 240, 0.4);">
+                <i class="bi bi-robot"></i>
             </div>
-            <h3 class="medical-service-title">Tiêm chủng</h3>
+            <h3 class="medical-service-title fw-bold" style="background: linear-gradient(90deg, #0d6efd, #0dcaf0); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI Liên Hoa</h3>
         </a>
     </div>
 </section>
@@ -217,11 +197,11 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="doctor-card-modern">
                     <div class="doctor-img-wrap">
-                        <img src="<?= BASE_URL ?>/assets/images/doctor1.jpg?v=1" alt="BS. CKI Lê Văn C">
+                        <img src="<?= BASE_URL ?>/assets/images/doctor2.jpg?v=1" alt="BS. CKI Lê Văn C">
                     </div>
                     <div class="doctor-card-body">
                         <span class="doctor-badge">Khoa Ngoại</span>
-                        <h3 class="doctor-name">BS. CKI Lê Văn C</h3>
+                        <h3 class="doctor-name">BS. CKI Lê Minh Tâm</h3>
                         <div class="doctor-desc">Nhiều năm kinh nghiệm trong thực hiện phẫu thuật nội soi ổ bụng và lồng ngực.</div>
                         <a href="<?= BASE_URL ?>/doctor/detail/3" class="doctor-card-link">Xem chi tiết <i class="bi bi-arrow-right"></i></a>
                     </div>

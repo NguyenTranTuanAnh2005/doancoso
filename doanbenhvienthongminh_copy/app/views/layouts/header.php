@@ -56,7 +56,7 @@
 
                 <!-- Nút Đặt Lịch Ngay -->
                 <a href="<?= BASE_URL ?>/booking" class="btn btn-booking-nav text-white shadow-sm rounded-pill px-4 py-2 d-flex align-items-center gap-2 text-decoration-none">
-                    <i class="bi bi-calendar2-check-fill"></i> <span data-lang="btn_book">ĐẶT LỊCH NGAY</span>
+                    <i class="bi bi-calendar2-check-fill"></i> <span data-lang="btn_book">ĐẶT LỊCH KHÁM</span>
                 </a>
                 
                 <!-- Nút chọn ngôn ngữ VI/EN -->
