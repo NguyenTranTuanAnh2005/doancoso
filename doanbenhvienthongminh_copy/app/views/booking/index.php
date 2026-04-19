@@ -5,7 +5,7 @@
         <div class="col-md-9 col-lg-7">
             <div class="card shadow-lg border-0 rounded-4">
                 <div class="card-body p-4 p-md-5">
-                    <h2 class="text-center text-success mb-4 fw-bold">📝 Đặt Dịch vụ xe cứu thương miễn phí</h2>
+                    <h2 class="text-center text-success mb-4 fw-bold"> Phiếu đặt lịch khám</h2>
                     <p class="text-center text-muted mb-4">Vui lòng điền đầy đủ và chính xác thông tin để chúng tôi sắp xếp lịch tốt nhất cho bạn.</p>
 
                     <form action="<?= BASE_URL ?>/booking/store" method="POST">

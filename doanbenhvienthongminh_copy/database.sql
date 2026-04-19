@@ -40,6 +40,15 @@ CREATE TABLE IF NOT EXISTS dat_lich (
     FOREIGN KEY (id_bac_si) REFERENCES bac_si(id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS thong_bao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tieu_de VARCHAR(255) NOT NULL,
+    noi_dung TEXT NOT NULL,
+    loai_thong_bao ENUM('he_thong', 'nhac_hen', 'khuyen_mai', 'tin_tuc') DEFAULT 'he_thong',
+    ngay_dang TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    trang_thai TINYINT(1) DEFAULT 1 -- 1: Hiển thị, 0: Ẩn
+);
+
 -- ==========================================================
 -- CHÈN DỮ LIỆU MẪU (MOCK DATA)
 -- ==========================================================
@@ -75,3 +84,10 @@ INSERT INTO dat_lich (ten_benh_nhan, so_dien_thoai, id_bac_si, ngay_hen, trang_t
 ('Đỗ Hữu Thắng', '0933221144', 4, '2026-04-12 10:15:00', 'hoan_thanh', 'Tư vấn đăng ký lịch nội soi dạ dày không đau tuần tới.'),
 ('Vũ Bích Ngọc', '0909090909', NULL, '2026-04-20 08:00:00', 'dang_cho', 'Tôi muốn tư vấn về chi phí gói khám thai sản.'),
 ('Lý Tiểu Long', '0888777666', 5, '2026-04-17 15:45:00', 'da_huy', 'Viêm tủy răng ê buốt kéo dài.');
+
+INSERT INTO thong_bao (tieu_de, noi_dung, loai_thong_bao) VALUES 
+('Lịch nghỉ lễ 30/4 và 1/5', 'Bệnh viện Liên Hoa xin thông báo lịch nghỉ lễ từ ngày 30/4 đến hết ngày 3/5. Khoa Cấp cứu vẫn hoạt động 24/7.', 'tin_tuc'),
+('Ưu đãi Gói khám tổng quát', 'Giảm ngay 20% cho khách hàng đăng ký gói khám tổng quát trong tháng 4 này.', 'khuyen_mai'),
+('Cập nhật tính năng Đặt lịch', 'Hệ thống vừa cập nhật tính năng chọn bác sĩ trực tuyến nhanh chóng hơn.', 'he_thong'),
+('Nhắc nhở tiêm chủng', 'Lịch tiêm chủng mở rộng cho trẻ em sẽ diễn ra vào sáng thứ 7 tuần này tại sảnh tầng 2.', 'nhac_hen'),
+('Thông báo bảo trì hệ thống', 'Hệ thống website sẽ bảo trì vào lúc 00:00 ngày 20/04/2026 để nâng cấp server.', 'he_thong');
